@@ -1,0 +1,368 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../Imagenes/fondo-volcan.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:white;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "presentacion presentacion presentacion"
+                         "section section section"                         
+                         "contact contact contact"
+                         "map map map"
+                         "footer footer footer";
+    
+}
+header {
+    grid-area: header;
+    display: grid;
+    justify-content: center;
+}
+header img {
+    width: 10rem;  
+}
+.articulo3 {
+    display: none;
+}
+nav {
+    grid-area: nav;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "inicio productos tips";
+    text-transform: uppercase;
+    background-color: rgb(64, 64, 250);
+    
+}
+nav a {
+    text-decoration: none;
+}
+nav p{
+    color: white;   
+}
+nav p:hover{
+    background-color: white;  
+    color: blue;
+}
+.wsp {
+    width: 70px;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+.wsp:hover,.facebook:hover,.instagram:hover{
+    -webkit-transform: scale(1.3);
+    transform:scale(1.3)
+}
+.inicio,.productos,.tips {
+    padding: 1rem;
+    margin: 0;
+}
+.inicio{
+    grid-area: inicio;
+}
+.productos{
+    grid-area: productos;
+}
+.tips{
+    grid-area: tips;
+}
+.presentacion {
+    grid-area: presentacion;
+    display: grid;
+    align-items:center;
+    grid-template-areas: "resumen experta";
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+.resumen {
+    grid-area: resumen;
+}
+.experta {
+    grid-area: experta;
+    width: 100%;
+}
+.contenedor{
+    grid-area: section;
+    overflow: hidden;
+}
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+.contenido-slider{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    flex-shrink: 0; /*evita que se encoga el contendio*/
+}
+.contenido-slider img{
+    width: 250px;
+}
+.contenido-slider div{
+    width: 100%;
+    text-align: center;
+}
+.contenido-slider h2{
+    font-size: 2rem;
+  
+}
+.contenido-slider a{
+    color: white;
+}
+.articulo3,.tip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.articulo3 img{
+    width: 300px;
+    height:200px
+}
+/*
+section article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+section article img,section article h2 {    
+    margin: 0;
+    padding: 0;
+    
+}
+section article img{
+    width: 200px;
+    border-style:groove;
+    border-radius: 5%;
+}
+section article h2{
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(3, 194, 194);
+    
+}
+section article p, .articulos h2, .articulos h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}*/
+.contenedor{
+    width:100%;
+}
+form {
+    grid-area: contact;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+form input,textarea,button{
+    margin: 1px;
+}
+form input {
+    width: 50%;
+    
+    /*box-shadow: outset 2px 2px 3px black;*/
+}
+form h2 {
+    text-transform: uppercase;
+}
+.map{
+    grid-area: map;
+}
+.mapa {
+    width: 100%;
+    height:200px;
+}
+footer{
+    grid-area: footer;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: blueviolet;
+    text-shadow: 2px 2px 1px black;
+}
+.button{
+    width: max-content;
+}
+.redes img {
+    height: 40px;
+}
+.articulos div img{
+    width: 100%;
+}
+.articulos{
+    grid-area: section;
+    display: grid;
+    grid-template-areas: "art1 art2"
+                         "art3 art4"
+                         "art5 .";
+}
+.art1{
+    grid-area: art1;
+}
+.art2{
+    grid-area: art2;
+}
+.art3{
+    grid-area: art3;
+}
+.art4{
+    grid-area: art4;
+}
+.art5{
+    grid-area: art5;
+}
+.articulos h2{
+    font-size: 16px;
+    color:rgb(3, 194, 194)
+}
+.articulos h3{
+    color: black;
+    margin: 0;
+    padding: 0.3rem;
+}
+.art1, .art2, .art3, .art4, .art5{
+    display: grid;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0.2rem;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px 2px grey;
+    border-radius: 2%;
+}
+@media only screen and (min-width:660px) {
+    header img {
+        width: 25rem;  
+        margin-top: 3rem;
+    }
+    .inicio,.productos,.tips {
+        font-size: 25px;
+    }
+    .wsp {
+        width: 100px;
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+    }
+    nav{
+        justify-content:space-evenly;
+        position:fixed;
+    }
+    .presentacion{
+        margin:2rem;
+        margin-top:0;
+    }
+    .resumen h2 {
+        font-size: 2.5rem;
+    }
+    .resumen p{
+        font-size: 1.4rem;
+        font-style: italic;
+    }
+    .contenido-slider{
+        flex-direction: row; 
+    }
+    .contenido-slider p{
+        font-size: 25px;
+    }
+    .contenido-slider img{
+        width:400px;
+    }
+    .contenido-slider div{
+        width: 40%;
+        text-align: start;
+    }
+    .contenido-slider h2{
+        font-weight: 300;
+        text-align: justify;
+    }/*
+    .contenido-slider img{
+        width: 250px;
+    }
+    .contenido-slider div{
+        width: 40%;
+    }
+    .contenido-slider h2{
+        font-size: 2rem;
+    }
+    
+    .articulo3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section article img{
+        width: 400px;
+        height:350px
+    }
+    section {
+        margin: 2rem;
+        display:grid;
+        grid-template-areas: "articulo1 articulo2"
+                             "articulo3 .";
+        align-items:flex-start;
+    }*/
+    .articulo1 {
+        grid-area: articulo1;
+        margin: 1rem;
+    }
+    .articulo2{
+        grid-area: articulo2;
+        margin: 1rem;
+    }
+    .articulo3{
+        grid-area: articulo3;
+        margin: 1rem;
+    }
+    section article h2{
+        font-size: 2rem;
+    }
+    section article p{
+        font-size: 1.2rem;
+    }
+    .tip{
+        align-items: flex-start;
+        display: flex;
+    }
+    form input, textarea {
+        width: 30%;
+    }
+    .mapa {
+        width: 100%;
+        height:400px;
+    }
+    .articulos{
+        display: grid;
+        grid-template-areas: "art1 art2 art3 art4"
+                             "art5 . . ."
+                             ;
+    }
+    section article img{
+        width: 400px;
+        height:350px
+    }
+    .articulo3 img{
+        width: 400px;
+        height:350px
+    }
+    .articulo3{
+        text-align: left;
+        align-items: flex-start;
+    }
+    li, .texttip {
+        font-size: 25px;
+    }
+}

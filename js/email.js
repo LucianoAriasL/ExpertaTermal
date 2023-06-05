@@ -12,7 +12,7 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Enviado';
-      alert('Sent!');
+      alert('Enviado!');
     }, (err) => {
       btn.value = 'Enviar';
       alert(JSON.stringify(err));
